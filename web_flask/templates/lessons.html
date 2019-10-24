@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Lesson {{ lesson_id }}</h1>
+    {% autoescape false %}
+    {% for lesson in new_lesson %}
+        {% if lesson.id == lesson_id %}
+        <h3>{{ lesson.title }}</h3>
+        <div class="scale">{{ lesson.body }}</div>
+        {% endif %}
+    {% endfor %}
+    {% endautoescape %}
+{% endblock %}

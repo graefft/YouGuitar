@@ -1,0 +1,98 @@
+.button {
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button a {
+    color: #EEE;
+    text-shadow:
+    -1px -1px #484848,
+    1px 1px #484848;
+}
+
+.button a:hover {
+    color: #000;
+}
+
+.description {
+    font-size: 16px;
+    padding-top: 15px;
+    text-align: justify;
+    width: 50%;
+}
+
+.lesson_list {
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.scale {
+    font-family: 'Monaco', 'Lucida Console', 'Courier';
+    font-size: 16px;
+} 
+
+header {
+    background: #356c89;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+header .logo {
+    background: url("../images/logo.png") no-repeat;
+    left: 20px;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+body .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1 {
+    font-size: 6em;
+}
+
+h3 {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 10px;
+    position: fixed;
+    background: #356c89;
+    height: 60px;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #484848;
+    color: #EEE;
+    text-shadow:
+    -1px -1px 0 #484848,
+    1px 1px 0 #484848;
+}
+footer p {
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
