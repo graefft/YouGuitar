@@ -1,7 +1,6 @@
 .button {
-    padding: 20px;
+    padding: 5px;
     flex-direction: row;
-    justify-content: space-between;
 }
 
 .button a {
@@ -15,11 +14,33 @@
     color: #000;
 }
 
+.chord {
+    background-color: #484848;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+}
+
+.chord_list {
+    grid-area: list;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .description {
+    grid-area: description;
     font-size: 16px;
-    padding-top: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
     text-align: justify;
-    width: 50%;
+    margin: auto;
 }
 
 .lesson_list {
@@ -33,13 +54,31 @@
 }
 
 .scale {
+    grid-area: content;
     font-family: 'Monaco', 'Lucida Console', 'Courier';
-    font-size: 16px;
-} 
+    font-size: 14px;
+    text-align: center;
+}
+
+.video {
+    grid-area: video;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56%;
+    height: 0;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
 
 header {
     background: #356c89;
-    height: 70px;
+    height: 50px;
     width: 100%;
     border-bottom: 1px solid #333;
 }
@@ -47,6 +86,12 @@ header .logo {
     background: url("../images/logo.png") no-repeat;
     left: 20px;
     height: 100%;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 body {
@@ -58,13 +103,51 @@ body {
 }
 body .container {
     max-width: 900px;
-    margin: 30px auto;
+    margin: 20px auto;
     padding-left: 10px;
     padding-right: 10px;
+    align-items: center;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "title title"
+        "heading heading"
+        "list list"
+        "content video"
+        "description video";
+}
+
+@media only screen and (max-width: 768px) {
+    body .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+            "title"
+            "heading"
+            "list"
+            "content"
+            "description"
+            "video"
+    }
+    .description {
+        width: 75%;
+    }
 }
 
 h1 {
+    grid-area: title;
     font-size: 6em;
+}
+
+h2 {
+    grid-area: heading;
+    background: #EEE;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
 }
 
 h3 {
@@ -79,7 +162,7 @@ footer {
     margin-top: 10px;
     position: fixed;
     background: #356c89;
-    height: 60px;
+    height: 40px;
     width: 100%;
     bottom: 0;
     border-top: 1px solid #484848;
@@ -91,7 +174,6 @@ footer {
 footer p {
     position: absolute;
     text-align: center;
-    top: 10%;
     bottom: 0;
     right: 0;
     left: 0;
