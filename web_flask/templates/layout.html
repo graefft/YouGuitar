@@ -12,8 +12,13 @@
     <body>
         <header>
             <div class="button">
-                <a href="{{ url_for('home') }}">Home</a>
-                <a href = "mailto: 676@holbertonschool.com">Contact</a>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('all_chords') }}">Chords</a></li>
+                    <li><a href="{{ url_for('all_scales') }}">Scales</a></li>
+                    <li><a href="{{ url_for('all_rhythms') }}">Rhythms</a></li>
+                    <li><a href = "mailto: 676@holbertonschool.com">Contact</a></li>
+                </ul>
             </div>
         </header>
         

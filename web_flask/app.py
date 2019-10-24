@@ -4,7 +4,7 @@ from flask import Flask, render_template, url_for
 from web_flask.scale import Scales
 from web_flask.chord import Chords
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 Scales = Scales()
 Chords = Chords()
@@ -48,6 +48,7 @@ rhythms = [
     ]
 
 @app.route('/')
+@app.route('/scale', strict_slashes=False)
 @app.route('/home', strict_slashes=False)
 def home():
     '''list lessons'''
@@ -56,13 +57,35 @@ def home():
                            scales=scales,
                            chords=chords,
                            rhythms=rhythms)
-    
+
+@app.route('/scales', strict_slashes=False)
+def all_scales():
+    return render_template('scales.html',
+                            scales=scales)
+
 @app.route('/scales/<scale_id>', strict_slashes=False)
 def lesson(scale_id):
     return render_template('scale.html',
                            scales = Scales,
                            title='Scales', scale_id=scale_id)
 
+
+@app.route('/chords', strict_slashes=False)
+def all_chords():
+    return render_template('chords.html',
+                            chords=chords)
+
+@app.route('/chords/<chord_id>', strict_slashes=False)
+def chord(chord_id):
+    return render_template('chord.html',
+                           chords=Chords,
+                           title='Chords', chord_id=chord_id)
+
+@app.route('/rhythms', strict_slashes=False)
+def all_rhythms():
+    return render_template('rhythms.html',
+                            title='Rhythms',
+                            rhythms=rhythms)
 
 @app.route('/01')
 def lesson_01(lesson_id='01'):

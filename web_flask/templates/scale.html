@@ -1,13 +1,14 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<h1>Scale {{ scale_id }}</h1>
+<!--<h1>Scale {{ scale_id }}</h1>-->
     {% autoescape false %}
     {% for scale in scales %}
         {% if scale.id == scale_id %}
         <h2>{{ scale.title }}</h2>
         <div class="scale">{{ scale.body }}</div>
         <div class="description">{{ scale.description }}</div>
+        <div class="video">{{ scale.video }}</div>
         {% endif %}
     {% endfor %}
     {% endautoescape %}

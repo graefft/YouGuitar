@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+            <h1>Welcome to YouGuitar</h1>
+
+            <h2>Choose a lesson:</h2>
+
+            <div class="chord_list">
+                {% for chord in chords %}
+                <a href="chords/{{ chord.id }}">
+                <h3>{{ chord.name }}</a></h3>
+                {% endfor %}
+            </div>
+            <br/>
+ {% endblock %}

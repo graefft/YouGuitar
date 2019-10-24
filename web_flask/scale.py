@@ -16,7 +16,8 @@ def Scales():
             'description': '''The prefix "penta" means <em>five</em>. This is a 5 note scale 
                             that is the foundation of most rock and pop improvisation. 
                             Practice it slowly and play it left to right as well as right to left.
-                            '''
+                            ''',
+            'video': '<iframe width="560" height="315" src="https://www.youtube.com/embed/yzdCNSm_BU4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         },
         {
             'id': '2',
@@ -28,7 +29,11 @@ def Scales():
                        |------------0-2-----------------|<br/>
                        |-------0-2----------------------|<br/>
                        |--0-3---------------------------|<br/>''',
-            'description': '''This adds the second octave to our E Pentatonic scale'''
+            'description': '''This adds the second octave to our E Pentatonic scale. Play it left to right 
+                              and backward then try with hammer-ons and pull-offs. When you are really 
+                              comfortable playing it using downstrokes then try with alternate picking 
+                              starting with a downstroke.''',
+            'video': '<iframe width="560" height="315" src="https://www.youtube.com/embed/yzdCNSm_BU4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         },
         {
             'id': '3',
@@ -42,7 +47,8 @@ def Scales():
                        |--1-4--------------------------------|<br/>''',
             'description': '''This version of the pentatonic scale allows us to play it in any key. 
                            Start by playing it at the first fret (key of Fm) but then try starting on a different 
-                           fret (ex. 5th) and think of the numbers in the tab as finger numbers'''
+                           fret (ex. 5th) and think of the numbers in the tab as finger numbers''',
+            'video': '<iframe width="560" height="315" src="https://www.youtube.com/embed/rCNZy-pGyIo?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         },
         {
             'id': '4',

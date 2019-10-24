@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!--<h1>Chord {{ chord_id }}</h1>-->
+    {% autoescape false %}
+    <div class="chord">
+    {% for chord in chords %}
+        {% if chord.id == chord_id %}
+        <img src="{{ chord.image }}">
+        <div class="description">{{ chord.description }}</div>
+        {% endif %}
+        {% endfor %}</div>
+    {% endautoescape %}
+{% endblock %}
