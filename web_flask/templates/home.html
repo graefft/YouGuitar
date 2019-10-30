@@ -1,26 +1,35 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-        <h1>Scales</h1>
-        <h2>Choose a Lesson:</h2>
+<div class="home_container">
+            <h1>Welcome to YouGuitar</h1>
+
+            <h2>Scales:</h2>
 
             <div class="chord_list">
                 {% for scale in scales %}
-                <a href="scales/{{ scale.id }}">
+                <ul>
+                    <a href="scales/{{ scale.id }}"></li>
+                </ul>
                 <h3>{{ scale.title }}</a></h3>
                 {% endfor %}
             </div>
+
+            <h2>Chords:</h2>
             <div class="chord_list">
                 {% for chord in chords %}
                 <a href="chords/{{ chord.id }}">
-                <h3>{{ chord.name }}</a></h3>
+                <h3>{{ chord.title }}</a></h3>
                 {% endfor %}
             </div>
-            <div class="lesson_list">
+            
+            <h2>Rhythms:</h2>
+            <div class="chord_list">
                 {% for rhythm in rhythms %}
                 <a href="rhythms/{{ rhythm.id }}">
                     <h3>{{ rhythm.name }}</a></h3>
                 {% endfor %}
             </div>
             <br/>
+</div>
  {% endblock %}

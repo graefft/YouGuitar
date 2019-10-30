@@ -15,18 +15,23 @@
 }
 
 .chord {
+    grid-area: content;
     background-color: #484848;
     border-radius: 25px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding: 20px;
+    padding: 5%;
     text-align: center;
 }
 
+.chord > img {
+    max-width: 30%;
+}
+
 .chord_list {
-    grid-area: list;
+    grid-area: bottom;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -34,23 +39,56 @@
 }
 
 .description {
+    background-color: #EEEEEE;
+    border-radius: 25px;
     grid-area: description;
     font-size: 16px;
     justify-content: center;
     align-items: center;
     padding: 15px;
     text-align: justify;
-    margin: auto;
+    margin: 0 auto;
+}
+
+.header_list {
+    margin: 0px auto;
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.home_container {
+    margin-bottom: 40px;
+}
+
+.home_link {
+    grid-area: bottom;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.home_link > a {
+    position: relative;
+    justify-self: center;
+    background: #484848;
+    border-radius: 25px;
+    color: #EEE;
+    padding: 10px;
+    margin: 10px;
+}
+
+.home_link > a:hover {
+    color: #000;
 }
 
 .lesson_list {
-    margin: 15px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.list {
+    list-style: none;
+    display: inline-block;
+    margin-right: auto;
 }
 
 .scale {
@@ -60,20 +98,30 @@
     text-align: center;
 }
 
+.scale_list {
+    grid-area: bottom;
+    padding-bottom: 50px;
+    /*    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+*/}
 .video {
     grid-area: video;
     position: relative;
     width: 100%;
-    padding-bottom: 56%;
     height: 0;
+    padding-bottom: 56%;
 }
 
 .video iframe {
     position: absolute;
+    border-radius: 25px;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    margin-bottom: 15px;
 }
 
 header {
@@ -88,12 +136,6 @@ header .logo {
     height: 100%;
 }
 
-li {
-    list-style: none;
-    display: inline-block;
-    margin-right: 20px;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -101,45 +143,71 @@ body {
     font-size: 14px;
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-body .container {
+
+body .grid-container {
     max-width: 900px;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
     align-items: center;
     display: grid;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    grid-row-gap: 15px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto;
     grid-template-areas:
         "title title"
         "heading heading"
-        "list list"
         "content video"
-        "description video";
+        "description video"
+        "bottom bottom";
 }
 
-@media only screen and (max-width: 768px) {
-    body .container {
+body .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+}
+
+@media(max-width: 768px) {
+    body .grid-container {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto;
         grid-template-areas:
             "title"
             "heading"
-            "list"
             "content"
             "description"
             "video"
+            "bottom"
     }
     .description {
         width: 75%;
+    }
+
+    .header_list {
+        position: relative;
+        margin: 0 auto;
+    }
+    
+    .header_list > li {
+        float: none;
+        display: inline-block;
+    }
+
+    h1 {
+        font-size: 10px;
     }
 }
 
 h1 {
     grid-area: title;
-    font-size: 6em;
+    font-size: 30px;
+    text-align: center;
 }
 
 h2 {
@@ -151,11 +219,34 @@ h2 {
 }
 
 h3 {
+    background: #356c89;
+    border-radius: 25px;
+    color: #EEE;
     padding: 10px;
+    margin: 10px 5px;
+}
+
+h3:hover {
+    background: #484848;
+}
+
+h3 > a {
+    color: #EEE;
 }
 
 a {
+    color: #000000;
     text-decoration: none;
+}
+
+a:hover ~ h3 {
+    background-color: #189189;
+    color: #848484;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 footer {

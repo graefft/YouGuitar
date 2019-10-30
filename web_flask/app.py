@@ -9,19 +9,6 @@ app = Flask(__name__, static_url_path='/static')
 Scales = Scales()
 Chords = Chords()
 
-scales = [
-    { 'name': 'Scale 1', 'id': '1' },
-    { 'name': 'Scale 2', 'id': '2' },
-    { 'name': 'Scale 3', 'id': '3' },
-    { 'name': 'Scale 4', 'id': '4' },
-    { 'name': 'Scale 5', 'id': '5' },
-    { 'name': 'Scale 6', 'id': '6' },
-    { 'name': 'Scale 7', 'id': '7' },
-    { 'name': 'Scale 8', 'id': '8' },
-    { 'name': 'Scale 9', 'id': '9' },
-    { 'name': 'Scale 10', 'id': '10' }
- ]
-
 chords = [
     { 'name': 'Chord 1', 'id': '1' },
     { 'name': 'Chord 2', 'id': '2' },
@@ -37,6 +24,17 @@ chords = [
     { 'name': 'Chord 12', 'id': '12' }
     ]
 
+chord_by_lesson = [
+    { 'title': 'Power Chords (2-note)', 'id': '1' },
+    { 'title': 'Power Chords (3-note)', 'id': '2' },
+    { 'title': 'Chords in Key of G', 'id': '3' },
+    { 'title': 'Chords in Key of A', 'id': '4' },
+    { 'title': 'Chords in Key of C', 'id': '5' },
+    { 'title': 'Chords in Key of F', 'id': '6' },
+    { 'title': 'Chords in Key of Dm', 'id': '7' }
+    ]
+
+
 rhythms = [
     { 'name': 'Rhythm 1', 'id': '1' },
     { 'name': 'Rhythm 2', 'id': '2' },
@@ -48,32 +46,34 @@ rhythms = [
     ]
 
 @app.route('/')
-@app.route('/scale', strict_slashes=False)
+def landing():
+    return render_template('index.html')
+
 @app.route('/home', strict_slashes=False)
 def home():
     '''list lessons'''
-    # lesson = storage.all(Lesson)
-    return render_template('index.html',
-                           scales=scales,
-                           chords=chords,
+    return render_template('home.html',
+                           scales=Scales,
+                           chords=chord_by_lesson,
                            rhythms=rhythms)
 
+@app.route('/scale', strict_slashes=False)
 @app.route('/scales', strict_slashes=False)
 def all_scales():
     return render_template('scales.html',
-                            scales=scales)
+                            scales=Scales)
 
 @app.route('/scales/<scale_id>', strict_slashes=False)
 def lesson(scale_id):
     return render_template('scale.html',
-                           scales = Scales,
+                           scales=Scales,
                            title='Scales', scale_id=scale_id)
 
 
 @app.route('/chords', strict_slashes=False)
 def all_chords():
     return render_template('chords.html',
-                            chords=chords)
+                            chords=chord_by_lesson)
 
 @app.route('/chords/<chord_id>', strict_slashes=False)
 def chord(chord_id):

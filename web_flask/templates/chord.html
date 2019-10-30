@@ -1,14 +1,30 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+<div class="grid-container">
 <!--<h1>Chord {{ chord_id }}</h1>-->
     {% autoescape false %}
+    {% for chord in chords %}
+        {% if chord.lesson_id == chord_id %}
+        <h2>{{ chord.type }}</h2>
+        {% endif %}
+    {% endfor %}
     <div class="chord">
     {% for chord in chords %}
-        {% if chord.id == chord_id %}
-        <img src="{{ chord.image }}">
-        <div class="description">{{ chord.description }}</div>
+        {% if chord.lesson_id == chord_id %}
+        <img src="{{ chord.image }}" alt="chord">
         {% endif %}
-        {% endfor %}</div>
+    {% endfor %}
+    </div>
+    {% for chord in chords %}
+        {% if chord.lesson_id == chord_id %}
+    <div class="description">{{ chord.description }}</div>
+    <div class="video">{{ chord.video }}</div>
+        {% endif %}
+    {% endfor %}
+    <div class="home_link">
+        <a href="../chords">Back to Chords</a>
+    </div>
     {% endautoescape %}
+</div>
 {% endblock %}

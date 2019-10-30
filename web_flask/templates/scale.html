@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+<div class="grid-container">
 <!--<h1>Scale {{ scale_id }}</h1>-->
     {% autoescape false %}
     {% for scale in scales %}
@@ -9,7 +10,11 @@
         <div class="scale">{{ scale.body }}</div>
         <div class="description">{{ scale.description }}</div>
         <div class="video">{{ scale.video }}</div>
+        <div class="home_link">
+            <a href="../scales">Back to Scales</a>
+        </div>
         {% endif %}
     {% endfor %}
     {% endautoescape %}
+</div>
 {% endblock %}
