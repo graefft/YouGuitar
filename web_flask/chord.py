@@ -12,7 +12,7 @@ def Chords():
                               They are two-note chords that can sound powerful for their size. They 
                               are comprised of the root note and the 5th note in the diatonic scale. 
                            ''',
-            'video': '''<iframe width="560" height="315" src="https://www.youtube.com/embed/OVDcMk6S-p8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'''
+            'video': '<iframe width="560" height="315" src="https://www.youtube.com/embed/OVDcMk6S-p8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         },
         {
             'id':'2',
@@ -35,6 +35,7 @@ def Chords():
                               They are two-note chords that can sound powerful for their size. They 
                               are comprised of the root note and the 5th note in the diatonic scale. 
                            ''',
+            'video': '<iframe width="560" height="315" src="https://www.youtube.com/embed/OVDcMk6S-p8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         },
         {
             'id': '4',
@@ -64,7 +65,7 @@ def Chords():
             'image': '../static/images/D5_chord-3.png',
             'description': '''These 3-note versions of the E5 A5 and D5 add a third note. This is an octave 
                            higher than the root note so the chord is still comprised of the root and 5th''',
- 
+             'video': '''<iframe width="560" height="315" src="https://www.youtube.com/embed/ik9TGv4YNX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'''
         },
         {
             'id': '7',
@@ -87,8 +88,8 @@ def Chords():
             'description': '''Use the first and second finger to play the Em chord. Keep your first finger 
                               in the same spot when switching to the G chord. Go back and forth a lot. We 
                               use these chords together all the time.
-                            '''
-        
+                            ''',
+             'video': '''<iframe width="560" height="315" src="https://www.youtube.com/embed/_NsdSzYb-N0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'''
         },
         {
             'id': '9',
@@ -122,6 +123,7 @@ def Chords():
                               block it from ringing. The E chord should be somewhat more comfortable, just 
                               make sure to keep the 1st finger close to the fret on the G string note.
                             ''',
+            'video': '''<iframe width="560" height="315" src="https://www.youtube.com/embed/pBacbX9yefA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'''
         },
         {
             'id': '11',
@@ -138,6 +140,7 @@ def Chords():
                               block it from ringing. The E chord should be somewhat more comfortable, just 
                               make sure to keep the 1st finger close to the fret on the G string note.
                            ''',
+            'video': '''<iframe width="560" height="315" src="https://www.youtube.com/embed/pBacbX9yefA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'''
         },
         {
             'id': '12',
@@ -164,7 +167,8 @@ def Chords():
                                all the time so try switching between them by only moving the 3rd finger. 
                               Recognizing these shortcuts will help tremendously with speeding up chord 
                               changes.
-                            '''
+                            ''',
+            'video': '''<iframe width="560" height="315" src="https://www.youtube.com/embed/DbcW1Fm6LsQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'''
         },
         {
             'id': '14',
@@ -208,6 +212,7 @@ def Chords():
                               bottom of hand outward from the guitar to allow the 1st finger to go straight 
                               across all the strings.
                            ''',
+             'video': '''<iframe width="560" height="315" src="https://www.youtube.com/embed/pbyHseP4NLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'''
         },
         {
             'id': '17',

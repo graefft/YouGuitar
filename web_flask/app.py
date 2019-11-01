@@ -26,8 +26,12 @@ rhythms = [
     { 'title': 'Rhythm 2', 'id': '2' },
     { 'title': 'Rhythm 3', 'id': '3' },
     { 'title': 'Rhythm 4', 'id': '4' },
-    { 'title': 'Rhythm 5', 'id': '5' }
-    ]
+    { 'title': 'Rhythm 5', 'id': '5' },
+    { 'title': 'Rhythm 6', 'id': '6' },
+    { 'title': 'Rhythm 7', 'id': '7' },
+    { 'title': 'Rhythm 8', 'id': '8' },
+    { 'title': 'Rhythm 9', 'id': '9' },
+    { 'title': 'Rhythm 10', 'id': '10' }   ]
 
 @app.route('/')
 def landing():
@@ -37,9 +41,15 @@ def landing():
 def home():
     '''lists all lessons'''
     return render_template('home.html',
-                           scales=Scales,
+                            scales=Scales,
                            chords=chord_by_lesson,
                            rhythms=rhythms)
+
+@app.route('/lessons', strict_slashes=False)
+def lessons():
+    return render_template('lessons.html',
+                            scales=Scales)
+
 
 @app.route('/scale', strict_slashes=False)
 @app.route('/scales', strict_slashes=False)
@@ -70,6 +80,13 @@ def all_rhythms():
     return render_template('rhythms.html',
                             title='Rhythms',
                             rhythms=rhythms)
+
+@app.route('/rhythms/<rhythm_id>', strict_slashes=False)
+def rhythm(rhythm_id):
+    return render_template('rhythm.html',
+                            rhythms=Rhythms,
+                            rhythm_id=rhythm_id,
+                            title='Rhythms')
 
 
 if __name__ == '__main__':

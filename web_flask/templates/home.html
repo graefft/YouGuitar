@@ -4,6 +4,17 @@
 <div class="home_container">
             <h1>Welcome to YouGuitar</h1>
 
+            <h2>Lessons:</h2>
+
+            <div class="chord_list">
+                {% for scale in scales %}
+                    <a href="scales/{{ scale.id }}">
+                        <h3>Lesson {{ scale.id }}</h3>
+                    </a>
+                {% endfor %}
+            </div>
+
+
             <h2>Scales:</h2>
 
             <div class="chord_list">

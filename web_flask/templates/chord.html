@@ -19,11 +19,16 @@
         {% if chord.lesson_id == chord_id %}
     <div class="description">{{ chord.description }}</div>
     <div class="video">{{ chord.video }}</div>
-        {% endif %}
-    {% endfor %}
     <div class="home_link">
-        <a href="../chords">Back to Chords</a>
+        <a href="../scales/{{ chord.lesson_id }}">Back to Scale</a>
     </div>
+    <div class="next_link">
+        <a href="../rhythms/{{ chord.lesson_id }}">Next</a>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
     {% endautoescape %}
 </div>
 {% endblock %}

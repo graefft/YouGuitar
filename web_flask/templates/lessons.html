@@ -1,13 +1,12 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<h1>Lesson {{ lesson_id }}</h1>
+<h1>Lessons {{ lesson_id }}</h1>
     {% autoescape false %}
-    {% for lesson in new_lesson %}
-        {% if lesson.id == lesson_id %}
-        <h3>{{ lesson.title }}</h3>
-        <div class="scale">{{ lesson.body }}</div>
-        {% endif %}
+    {% for lesson in scales %}
+    <a href="scales/{{ lesson.id }}">
+        <h3 class="lesson_link">Lesson {{ lesson.id }}</h3>
+    </a>
     {% endfor %}
     {% endautoescape %}
 {% endblock %}

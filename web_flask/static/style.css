@@ -50,7 +50,7 @@
 }
 
 .chord_list {
-    grid-area: bottom;
+    grid-area: bottom1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -87,7 +87,7 @@
 }
 
 .home_link {
-    grid-area: bottom;
+    grid-area: bottom1;
     text-align: center;
     padding-bottom: 35px;
 }
@@ -103,6 +103,26 @@
 }
 
 .home_link > a:hover {
+    color: #000;
+}
+
+.next_link {
+    grid-area: bottom2;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.next_link > a {
+    position: relative;
+    justify-self: center;
+    background: #484848;
+    border-radius: 25px;
+    color: #EEE;
+    padding: 10px;
+    margin: 10px;
+}
+
+.next_link > a:hover {
     color: #000;
 }
 
@@ -126,6 +146,15 @@
     list-style: none;
     display: inline-block;
     margin-right: auto;
+}
+
+.rhythm {
+    grid-area: content;
+}
+
+.rhythm img {
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .scale {
@@ -206,7 +235,7 @@ body .grid-container {
         "heading heading"
         "content video"
         "description video"
-        "bottom bottom";
+        "bottom1 bottom2";
 }
 
 body .container {
@@ -227,7 +256,8 @@ body .container {
             "content"
             "description"
             "video"
-            "bottom"
+            "bottom1"
+            "bottom2"
     }
     .description {
         width: 75%;
@@ -264,7 +294,7 @@ h2 {
 }
 
 h3 {
-    grid-area: bottom;
+    grid-area: bottom1;
     background: #356c89;
     border-radius: 25px;
     color: #EEE;

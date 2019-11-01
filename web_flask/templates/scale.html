@@ -11,8 +11,12 @@
         <div class="description">{{ scale.description }}</div>
         <div class="video">{{ scale.video }}</div>
         <div class="home_link">
-            <a href="../scales">Back to Scales</a>
+            <a href="../lessons">Back to Lessons</a>
         </div>
+        <div class="next_link">
+        <a href="../chords/{{ scale.id }}">
+            Next</div>
+        </a>
         {% endif %}
     {% endfor %}
     {% endautoescape %}
