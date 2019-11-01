@@ -1,3 +1,11 @@
+.about {
+    grid-area: content;
+}
+
+.about > img {
+    width: 50px;
+}
+
 .button {
     padding: 5px;
     flex-direction: row;
@@ -14,6 +22,16 @@
     color: #000;
 }
 
+.center {
+    text-align: center;
+}
+
+.center_image {
+    grid-area: heading;
+    display: block;
+    margin: 0 auto;
+}
+
 .chord {
     grid-area: content;
     background-color: #484848;
@@ -28,6 +46,7 @@
 
 .chord > img {
     max-width: 30%;
+    margin: 0 auto;
 }
 
 .chord_list {
@@ -40,6 +59,7 @@
 
 .description {
     background-color: #EEEEEE;
+    border: 1px solid #484848;
     border-radius: 25px;
     grid-area: description;
     font-size: 16px;
@@ -50,6 +70,10 @@
     margin: 0 auto;
 }
 
+.enter {
+    grid-area: video;
+}
+
 .header_list {
     margin: 0px auto;
     list-style: none;
@@ -58,6 +82,7 @@
 }
 
 .home_container {
+    height: 100%;
     margin-bottom: 40px;
 }
 
@@ -81,6 +106,18 @@
     color: #000;
 }
 
+.icons {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.icons img {
+    display: ;
+    max-width: 10%;
+    margin: auto auto;
+}
+
 .lesson_list {
     padding-bottom: 20px;
 }
@@ -92,6 +129,8 @@
 }
 
 .scale {
+    background-color: #FFFFFF;
+    border-radius: 25px;
     grid-area: content;
     font-family: 'Monaco', 'Lucida Console', 'Courier';
     font-size: 14px;
@@ -106,6 +145,11 @@
     flex-wrap: wrap;
     justify-content: center;
 */}
+
+.tagline {
+    grid-area: heading;
+}
+
 .video {
     grid-area: video;
     position: relative;
@@ -213,12 +257,14 @@ h1 {
 h2 {
     grid-area: heading;
     background: #EEE;
+    border: 1px solid #000000;
     border-radius: 25px;
     padding: 10px;
     text-align: center;
 }
 
 h3 {
+    grid-area: bottom;
     background: #356c89;
     border-radius: 25px;
     color: #EEE;
@@ -234,9 +280,19 @@ h3 > a {
     color: #EEE;
 }
 
+h4 {
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+}
+
 a {
     color: #000000;
     text-decoration: none;
+}
+
+a:hover {
+    color: #848484;
 }
 
 a:hover ~ h3 {

@@ -8,26 +8,27 @@
 
             <div class="chord_list">
                 {% for scale in scales %}
-                <ul>
-                    <a href="scales/{{ scale.id }}"></li>
-                </ul>
-                <h3>{{ scale.title }}</a></h3>
+                    <a href="scales/{{ scale.id }}">
+                        <h3>{{ scale.title }}</h3>
+                    </a>
                 {% endfor %}
             </div>
 
             <h2>Chords:</h2>
             <div class="chord_list">
                 {% for chord in chords %}
-                <a href="chords/{{ chord.id }}">
-                <h3>{{ chord.title }}</a></h3>
+                    <a href="chords/{{ chord.id }}">
+                        <h3>{{ chord.title }}</h3>
+                    </a>
                 {% endfor %}
             </div>
             
             <h2>Rhythms:</h2>
             <div class="chord_list">
                 {% for rhythm in rhythms %}
-                <a href="rhythms/{{ rhythm.id }}">
-                    <h3>{{ rhythm.name }}</a></h3>
+                    <a href="rhythms/{{ rhythm.id }}">
+                        <h3>{{ rhythm.title }}</h3>
+                    </a>
                 {% endfor %}
             </div>
             <br/>
