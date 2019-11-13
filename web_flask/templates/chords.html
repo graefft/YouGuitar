@@ -1,16 +1,31 @@
 {% extends 'layout.html' %}
+/* lists all Chords in database */
+
 
 {% block body %}
-            <h1>Chords</h1>
+    <h1>Chords</h1>
 
-            <h2>Choose a lesson:</h2>
+    <h2>Choose a lesson:</h2>
 
-            <div class="chord_list">
-                {% for chord in chords %}
+    <h4>Diads</h4>
+    <div class="chord_list"> 
+        {% for chord in chords %}
+            {% if chord['type'] == 'diad' %}
                 <a href="chords/{{ chord.id }}">
-                    <h3>{{ chord.title }}</h3>
+                <h3>{{ chord.title }}</h3>
                 </a>
-                {% endfor %}
-            </div>
-            <br/>
- {% endblock %}
+            {% endif %}
+        {% endfor %} 
+    </div>
+
+    <h4>Triads</h4>
+    <div class="chord_list">
+        {% for chord in chords %}
+            {% if chord.type == 'triad' %}
+                <a href="chords/{{ chord.id }}">
+                <h3>{{ chord.title }}</h3>
+                </a>
+            {% endif %}
+        {% endfor %} 
+    </div>
+{% endblock %}

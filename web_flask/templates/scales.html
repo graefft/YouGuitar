@@ -1,27 +1,32 @@
 {% extends 'layout.html' %}
+/* lists all scales in database */
+
 
 {% block body %}
         <h1>Scales</h1>
         <h2>Choose a Lesson:</h2>
 
-            <div class="chord_list">
-                {% for scale in scales %}
-                <a href="scales/{{ scale.id }}">
+        <h4>Pentatonic Scales</h4>
+        <div class="chord_list">
+            {% for scale in scales %}
+                {% if scale.type == 'pentatonic' %}
+                    <a href="scales/{{ scale.id }}">
                     <h3>{{ scale.title }}</h3>
-                </a>
-                {% endfor %}
-            </div>
-            <div class="chord_list">
-                {% for chord in chords %}
-                <a href="chords/{{ chord.id }}">
-                <h3>{{ chord.name }}</a></h3>
-                {% endfor %}
-            </div>
-            <div class="lesson_list">
-                {% for rhythm in rhythms %}
-                <a href="rhythms/{{ rhythm.id }}">
-                    <h3>{{ rhythm.name }}</a></h3>
-                {% endfor %}
-            </div>
-            <br/>
- {% endblock %}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <br/>
+
+        <h4>Diatonic Scales</h4>
+        <div class="chord_list">
+            {% for scale in scales %}
+                {% if scale.type == 'diatonic' %}
+                    <a href="scales/{{ scale.id }}">
+                    <h3>{{ scale.title }}</h3>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+{% endblock %}
