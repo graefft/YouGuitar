@@ -35,6 +35,7 @@ rhythms = [
 
 @app.route('/')
 def landing():
+    '''Directs to index page'''
     return render_template('index.html')
 
 @app.route('/home', strict_slashes=False)
@@ -47,6 +48,7 @@ def home():
 
 @app.route('/lessons', strict_slashes=False)
 def lessons():
+    '''lists Lessons'''
     return render_template('lessons.html',
                             scales=Scales)
 
@@ -54,11 +56,13 @@ def lessons():
 @app.route('/scale', strict_slashes=False)
 @app.route('/scales', strict_slashes=False)
 def all_scales():
+    '''returns all scales and lists them'''
     return render_template('scales.html',
                             scales=Scales)
 
 @app.route('/scales/<scale_id>', strict_slashes=False)
 def lesson(scale_id):
+    '''renders html page for each scale by id'''
     return render_template('scale.html',
                            scales=Scales,
                            title='Scales', scale_id=scale_id)
@@ -66,23 +70,27 @@ def lesson(scale_id):
 
 @app.route('/chords', strict_slashes=False)
 def all_chords():
+    '''lists all chords'''
     return render_template('chords.html',
-                            chords=chord_by_lesson)
+                            chords=Chords)
 
 @app.route('/chords/<chord_id>', strict_slashes=False)
 def chord(chord_id):
+    '''renders html page for chord by id'''
     return render_template('chord.html',
                            chords=Chords,
                            title='Chords', chord_id=chord_id)
 
 @app.route('/rhythms', strict_slashes=False)
 def all_rhythms():
+    '''lists all rhythms'''
     return render_template('rhythms.html',
                             title='Rhythms',
                             rhythms=rhythms)
 
 @app.route('/rhythms/<rhythm_id>', strict_slashes=False)
 def rhythm(rhythm_id):
+    '''renders html page of rhythm by id'''
     return render_template('rhythm.html',
                             rhythms=Rhythms,
                             rhythm_id=rhythm_id,

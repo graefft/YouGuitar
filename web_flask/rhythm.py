@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+'''database for all Rhythm information'''
+
 
 def Rhythms():
+    '''dictionary to hold rhythm info'''
     rhythm_data = [
         {
             'id': '1',

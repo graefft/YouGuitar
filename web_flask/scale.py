@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+'''database for all scale information'''
+
 
 def Scales():
+    '''dictionary with all scale info'''
     scale_data = [
         {
             'id': '1',
-            'type': 'scale',
+            'type': 'pentatonic',
             'title': 'E Pentatonic Scale',
             'body': '''e|------------------------|<br/>
                        B|------------------------|<br/>
@@ -21,7 +24,7 @@ def Scales():
         },
         {
             'id': '2',
-            'type': 'scale',
+            'type': 'pentatonic',
             'title': 'E Pentatonic Scale',
             'body': '''e|---------------------------0-3--|<br/>
                        B|----------------------0-3-------|<br/>
@@ -37,7 +40,7 @@ def Scales():
         },
         {
             'id': '3',
-            'type': 'scale',
+            'type': 'pentatonic',
             'title': 'Moveable Pentatonic Scale',
             'body': '''e|--------------------------------1-4--|<br/>
                        B|--------------------------1-4--------|<br/>
@@ -52,7 +55,7 @@ def Scales():
         },
         {
             'id': '4',
-            'type': 'scale',
+            'type': 'pentatonic',
             'title': 'Big E (minor) Pentatonic Scale',
             'body': '''e|-------------------------------------10-12--|<br/>
                        B|----------------------------8-10/12---------|<br/>
@@ -67,7 +70,7 @@ def Scales():
         },
         {
             'id': '5',
-            'type': 'scale',
+            'type': 'pentatonic',
             'title': 'Big A (minor) Pentatonic Scale',
             'body': '''e|---------------------------------8-10/12--|<br/>
                        B|---------------------------8-10-----------|<br/>
@@ -80,7 +83,7 @@ def Scales():
         },
         {
             'id': '6',
-            'type': 'scale',
+            'type': 'diatonic',
             'title': 'C Major Scale',
             'body': '''e|----------------------|<br/>
                        B|-----------------0-1--|<br/>
@@ -94,7 +97,7 @@ def Scales():
         },
         {
             'id': '7',
-            'type': 'scale',
+            'type': 'diatonic',
             'title': 'A Minor Scale',
             'body': '''e|---------------------|<br/>
                        B|---------------------|<br/>
@@ -109,7 +112,7 @@ def Scales():
         },
         {
             'id': '8',
-            'type': 'scale',
+            'type': 'diatonic',
             'title': 'E Phrygian Scale',
             'body': '''e|-----------------------------------0-1-3--|<br/>
                        B|----------------------------0-1-3---------|<br/>
@@ -123,7 +126,7 @@ def Scales():
         },
         {
             'id': '9',
-            'type': 'scale',
+            'type': 'diatonic',
             'title': 'Moveable Major Scale (one-octave)',
             'body': '''e|---------------------------|<br/>
                        B|---------------------------|<br/>
@@ -138,7 +141,7 @@ def Scales():
         },
         {
             'id': '10',
-            'type': 'scale',
+            'type': 'diatonic',
             'title': 'Moveable Major Scale (two-octaves)',
             'body': '''e|----------------------------------1-2---|<br/>
                        B|-----------------------------2-4--------|<br/>

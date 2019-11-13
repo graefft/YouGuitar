@@ -1,11 +1,14 @@
 #!/usr/bin/python3
+'''database for all Chord information'''
+
 
 def Chords():
+    '''holds all data'''
     chord_data = [
         {
-            'id': '1',
             'lesson_id': '1',
-            'type': 'Power Chords',
+            'id': '1',
+            'type': 'diad',
             'title': 'E5 Power Chord',
             'image': '../static/images/E5_chord-2.png',
             'description': '''Chords with a 5 suffix are often referred to as <em>power chords</em>. 
@@ -17,7 +20,7 @@ def Chords():
         {
             'id':'2',
             'lesson_id': '1',
-            'type': 'Power Chords',
+            'type': 'diad',
             'title': 'A5 Power Chord',
             'image': '../static/images/A5_chord-2.png',
             'description': '''Chords with a 5 suffix are often referred to as <em>power chords</em>. 
@@ -28,7 +31,7 @@ def Chords():
         {
             'id': '3',
             'lesson_id': '1',
-            'type': 'Power Chords',
+            'type': 'diad',
             'title': 'D5 Power Chord',
             'image': '../static/images/D5_chord-2.png',
             'description': '''Chords with a 5 suffix are often referred to as <em>power chords</em>. 
@@ -40,7 +43,7 @@ def Chords():
         {
             'id': '4',
             'lesson_id': '2',
-            'type': 'Power Chords (3-note)',
+            'type': 'diad',
             'title': 'E5 Power Chord (3 note)',
             'image': '../static/images/E5_chord-3.png',
             'description': '''These 3-note versions of the E5 A5 and D5 add a third note. This is an octave 
@@ -50,7 +53,7 @@ def Chords():
         {
             'id': '5',
             'lesson_id': '2',
-            'type': 'Power Chords (3-note)',
+            'type': 'diad',
             'title': 'A5 Power Chord (3 note)',
             'image': '../static/images/A5_chord-3.png',
             'description': '''These 3-note versions of the E5 A5 and D5 add a third note. This is an octave 
@@ -60,7 +63,7 @@ def Chords():
         {
             'id': '6',
             'lesson_id': '2',
-            'type': 'Power Chords (3-note)',
+            'type': 'diad',
             'title': 'D5 Power Chord (3 note)',
             'image': '../static/images/D5_chord-3.png',
             'description': '''These 3-note versions of the E5 A5 and D5 add a third note. This is an octave 
@@ -70,7 +73,7 @@ def Chords():
         {
             'id': '7',
             'lesson_id': '3',
-            'type': 'Chords in Key of G',
+            'type': 'triad',
             'title': 'Em Chord',
             'image': '../static/images/Em_chord.png',
             'description': '''Use the first and second finger to play the Em chord. Keep your first finger 
@@ -82,7 +85,7 @@ def Chords():
         {
             'id': '8',
             'lesson_id': '3',
-            'type': 'Chords in Key of G',
+            'type': 'triad',
             'title': 'G Chord',
             'image': '../static/images/G_chord.png',
             'description': '''Use the first and second finger to play the Em chord. Keep your first finger 
@@ -94,7 +97,7 @@ def Chords():
         {
             'id': '9',
             'lesson_id': '4',
-            'type': 'Chords in Key of A',
+            'type': 'triad',
             'title': 'A Chord',
             'image': '../static/images/A_chord.png',
             'description': '''The standard way to play A is with the first 3 fingers squeezed closely 
@@ -111,7 +114,7 @@ def Chords():
         {
             'id': '10',
             'lesson_id': '4',
-            'type': 'Chords in Key of A',
+            'type': 'triad',
             'title': 'D Chord',
             'image': '../static/images/D_chord.png',
             'description': '''The standard way to play A is with the first 3 fingers squeezed closely 
@@ -128,7 +131,7 @@ def Chords():
         {
             'id': '11',
             'lesson_id': '4',
-            'type': 'Chords in Key of A',
+            'type': 'triad',
             'title': 'E Chord',
             'image': '../static/images/E_chord.png',
             'description': '''The standard way to play A is with the first 3 fingers squeezed closely 
@@ -145,7 +148,7 @@ def Chords():
         {
             'id': '12',
             'lesson_id': '5',
-            'type': 'Chords in Key of C',
+            'type': 'triad',
             'title': 'C Chord',
             'image': '../static/images/C_chord.png',
             'description': '''The important thing to note here is that the 1st and 2nd fingers stay in the 
@@ -159,7 +162,7 @@ def Chords():
         {
             'id': '13',
             'lesson_id': '5',
-            'type': 'Chords in Key of C',
+            'type': 'triad',
             'title': 'Am Chord',
             'image': '../static/images/Am_chord.png',
             'description': '''The important thing to note here is that the 1st and 2nd fingers stay in the 
@@ -173,7 +176,7 @@ def Chords():
         {
             'id': '14',
             'lesson_id': '6',
-            'type': 'Chords in Key of F',
+            'type': 'triad',
             'title': 'F Chord',
             'image': '../static/images/F_chord-3.png',
             'description': '''The F chord is annoying at first for any guitarist. Start with the 3-finger 
@@ -188,7 +191,7 @@ def Chords():
         {
             'id': '15',
             'lesson_id': '6',
-            'type': 'Chords in Key of F',
+            'type': 'triad',
             'title': 'F Chord',
             'image': '../static/images/F_chord-4.png',
             'description': '''The F chord is annoying at first for any guitarist. Start with the 3-finger 
@@ -202,7 +205,7 @@ def Chords():
         {
             'id': '16',
             'lesson_id': '6',
-            'type': 'Chords in Key of F',
+            'type': 'triad',
             'title': 'F Chord',
             'image': '../static/images/F_chord-6.png',
             'description': '''The F chord is annoying at first for any guitarist. Start with the 3-finger 
