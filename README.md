@@ -9,6 +9,19 @@ This project is intended to be used by private guitar students of mine
 to help provide resources for their learning. It is ever-changing with 
 new features added almost daily (for now)
 
+## Installation
+visit www.doyouguitar.com
+
+or 
+
+make sure to install Python3, Jinja2, and Flask1
+then clone this repository
+
+
+### Usage
+Use this site with a guitar! Learn how to play
+
+
 ### Technologies used
 Built primarily with Python3 and Flask with heavy use of Jinja
 
@@ -27,3 +40,4 @@ FILE | DESCRIPTION
 
 ### Author
 Thomas Graeff
+[LinkedIn](https://www.linkedin.com/in/thomas-graeff-b3ab4380/)
