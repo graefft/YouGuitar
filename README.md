@@ -2,6 +2,8 @@
 
 http://www.doyouguitar.com
 
+![YouGuitar screenshot](https://github.com/graefft/YouGuitar/blob/master/web_flask/static/images/YouGuitar_SS.png)
+
 ## About
 This project is intended to be used by private guitar students of mine 
 to help provide resources for their learning. It is ever-changing with 
