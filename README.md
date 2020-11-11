@@ -15,7 +15,7 @@ Use this site with a guitar! Learn how to play
 
 
 ### Technologies used
-Python3, Flask, Jinja
+Python3, Flask, Jinja  
 OS: Ubuntu 14.04
 
 FILE | DESCRIPTION
