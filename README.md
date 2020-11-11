@@ -6,8 +6,8 @@ http://www.doyouguitar.com
 
 ## About
 This project is intended to be used by private guitar students of mine 
-to help provide resources for their learning. It is ever-changing with 
-new features added almost daily (for now)
+to help provide resources for their learning.
+It's second iteration will be to allow students access to weekly lesson plans and the related resources
 
 
 ### Usage
@@ -15,8 +15,7 @@ Use this site with a guitar! Learn how to play
 
 
 ### Technologies used
-Built primarily with Python3 and Flask with heavy use of Jinja
-
+Python3, Flask, Jinja
 OS: Ubuntu 14.04
 
 FILE | DESCRIPTION
